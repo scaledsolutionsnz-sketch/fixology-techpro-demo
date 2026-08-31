@@ -9,7 +9,7 @@
 <meta property="og:description" content="Cracked screen, flat battery or a slow laptop? Bring it in to 39 Jellicoe Street, Te Puke. Rated 4.6 on Google.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="img/hero-1.jpg">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2314120e'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' font-weight='bold' fill='%23c9a14a' text-anchor='middle'%3EF%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Work+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -75,7 +75,9 @@ header{
   max-width:1120px;margin:0 auto;padding:0 22px;
   height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px;
 }
-.brand{display:flex;flex-direction:column;line-height:1.1}
+.brand{display:flex;align-items:center;gap:12px;line-height:1.1}
+.brand-logo{height:42px;width:auto;flex:none}
+.brand-text{display:flex;flex-direction:column;line-height:1.1}
 .brand .b1{font-family:'Sora',sans-serif;font-weight:700;font-size:1.06rem;letter-spacing:.12em;color:var(--gold)}
 .brand .b2{font-size:.72rem;letter-spacing:.28em;color:var(--text-mut);text-transform:uppercase}
 .nav-links{display:flex;align-items:center;gap:26px}
@@ -291,7 +293,7 @@ section{padding:96px 0}
 /* ---------- footer ---------- */
 footer{background:#0f0d0a;padding:52px 0 36px;border-top:1px solid rgba(201,161,74,.15)}
 .foot-grid{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap}
-.foot-brand img{height:52px;width:auto;display:block;border-radius:6px}
+.foot-brand img{height:150px;width:auto;display:block}
 .foot-brand p{color:var(--text-mut);font-size:.88rem;margin-top:12px;max-width:34ch}
 .foot-col h3{font-size:.8rem;text-transform:uppercase;letter-spacing:.16em;color:var(--gold-soft);margin-bottom:14px}
 .foot-col ul{list-style:none;display:grid;gap:9px}
@@ -336,8 +338,11 @@ footer{background:#0f0d0a;padding:52px 0 36px;border-top:1px solid rgba(201,161,
 <header>
   <nav class="nav" aria-label="Main">
     <a href="#top" class="brand" aria-label="Fixology Techpro home">
-      <span class="b1">FIXOLOGY</span>
-      <span class="b2">Techpro</span>
+      <img class="brand-logo" src="img/logo-mark.png" alt="" width="42" height="40">
+      <span class="brand-text">
+        <span class="b1">FIXOLOGY</span>
+        <span class="b2">Techpro</span>
+      </span>
     </a>
     <div class="nav-links">
       <a href="#services">Repairs</a>
@@ -631,7 +636,7 @@ footer{background:#0f0d0a;padding:52px 0 36px;border-top:1px solid rgba(201,161,
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <img src="img/logo.jpg" alt="Fixology Tech logo, gold lettering with the tagline We Fix 4U" width="960" height="320" loading="lazy">
+        <img src="img/logo-gold.png" alt="Fixology Tech logo, a phone and gear mark with the tagline We Fix 4U" width="884" height="1350" loading="lazy">
         <p>Phone and computer repairs at 39 Jellicoe Street, Te Puke, Bay of Plenty.</p>
       </div>
       <div class="foot-col">
