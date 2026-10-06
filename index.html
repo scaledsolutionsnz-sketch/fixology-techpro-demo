@@ -1,771 +1,630 @@
 <!DOCTYPE html>
 <html lang="en-NZ">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
 <title>Fixology Techpro | Phone &amp; Computer Repairs, Te Puke</title>
-<meta name="description" content="Fixology Techpro repairs phones, tablets and computers at 39 Jellicoe Street, Te Puke. Screens, batteries, back glass, laptops and upgrades. Rated 4.6 on Google.">
-<meta property="og:title" content="Fixology Techpro | Phone &amp; Computer Repairs, Te Puke">
-<meta property="og:description" content="Cracked screen, flat battery or a slow laptop? Bring it in to 39 Jellicoe Street, Te Puke. Rated 4.6 on Google.">
+<meta name="description" content="Phone, tablet and laptop repairs at 39 Jellicoe Street, Te Puke. Cracked screens, batteries, back glass, unlocking and CCTV. Rated 4.6 on Google.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="img/hero-1.jpg">
-<link rel="icon" type="image/png" href="img/favicon.png">
+<meta property="og:title" content="Fixology Techpro | Phone &amp; Computer Repairs, Te Puke">
+<meta property="og:description" content="Cracked screen? Flat battery? Fixed at our shop on Jellicoe Street, Te Puke.">
+<meta property="og:image" content="img/og-image.jpg">
+<meta name="theme-color" content="#121110">
+<link rel="icon" href="img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Work+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
 <style>
 :root{
-  --ink:#14120e;
-  --panel:#1c1913;
-  --panel-2:#242017;
-  --bone:#f4efe5;
-  --bone-2:#ece5d6;
-  --gold:#c9a14a;
-  --gold-soft:#e0be74;
-  --text-dark:#eae4d6;
-  --text-mut:#b3ab97;
-  --text-ink:#211d15;
-  --text-ink-soft:#5c5544;
-  --radius:14px;
-  --ease:cubic-bezier(0.16,1,0.3,1);
+  --accent:#d0ae40;        /* gold, from their logo and shopfront lettering */
+  --accent-dark:#7d6413;   /* gold dark enough for text on light backgrounds */
+  --accent-soft:#f3e9c8;
+  --bg:#fbf9f4;
+  --bone:#f3efe5;
+  --ink:#121110;           /* dark anchor, from their black shopfront */
+  --ink-2:#1c1a17;
+  --muted:#5f5a50;
+  --line:#e4dccb;
+  --star:#e8b931;
+  --r-lg:28px;
+  --r:18px;
+  --display:'Unbounded', 'Trebuchet MS', sans-serif;
+  --body:'Manrope', Arial, sans-serif;
 }
-*{margin:0;padding:0;box-sizing:border-box}
+*,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth}
-@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
-img{image-orientation:from-image;max-width:100%}
-body{
-  font-family:'Work Sans',sans-serif;
-  background:var(--ink);
-  color:var(--text-dark);
-  font-size:16px;
-  line-height:1.7;
-  overflow-x:hidden;
-}
-h1,h2,h3{font-family:'Sora',sans-serif;line-height:1.15}
-a{color:inherit;text-decoration:none}
-::selection{background:var(--gold);color:var(--ink)}
-:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
-.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+body{margin:0;font-family:var(--body);font-size:17px;line-height:1.62;color:var(--ink);background:var(--bg);overflow-x:hidden}
+img{max-width:100%;height:auto;display:block;image-orientation:from-image}
+a{color:var(--accent-dark)}
+h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0 0 .5em;font-weight:700;letter-spacing:-.025em}
+h2{font-size:clamp(1.8rem,4vw,2.8rem)}
+h3{font-size:1.12rem;font-weight:600;letter-spacing:-.01em}
+p{margin:0 0 1em}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+section{padding:92px 0;position:relative;scroll-margin-top:74px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-dark);background:var(--accent-soft);padding:6px 14px;border-radius:99px;margin-bottom:16px}
+.section-head{max-width:640px;margin-bottom:48px}
+.section-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.section-head p{color:var(--muted);font-size:1.06rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:12px 26px;border-radius:99px;font-weight:800;font-size:1rem;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .25s cubic-bezier(.34,1.56,.64,1),background .2s,color .2s,box-shadow .25s,border-color .2s;font-family:var(--body)}
+.btn:hover{transform:translateY(-3px)}
+.btn-primary{background:var(--accent);color:var(--ink);box-shadow:0 12px 26px -12px rgba(208,174,64,.75)}
+.btn-primary:hover{background:#e0c160}
+.btn-soft{background:#fff;color:var(--ink);border-color:var(--line)}
+.btn-soft:hover{border-color:var(--accent-dark)}
+.btn-outline-light{border-color:rgba(255,255,255,.55);color:#fff}
+.btn-outline-light:hover{background:#fff;color:var(--ink)}
+.btn svg{width:20px;height:20px;flex:none}
+.icon{width:24px;height:24px;flex:none}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:8px}
+.skip{position:absolute;left:-999px;top:8px;background:#fff;color:var(--ink);padding:10px 16px;border-radius:8px;z-index:100}
+.skip:focus{left:8px}
 
-/* ---------- intro ---------- */
-#intro{
-  position:fixed;inset:0;z-index:200;background:var(--ink);
-  display:flex;align-items:center;justify-content:center;
-  transition:opacity .6s var(--ease),visibility .6s;
-}
-#intro .mark{
-  font-family:'Sora',sans-serif;font-weight:700;font-size:1.5rem;letter-spacing:.14em;
-  color:var(--gold);opacity:0;transform:translateY(10px);
-  animation:introMark .7s var(--ease) .1s forwards;
-}
-#intro.gone{opacity:0;visibility:hidden}
-@keyframes introMark{to{opacity:1;transform:none}}
-@media (prefers-reduced-motion: reduce){
-  #intro{display:none}
-}
+/* ---------- WAVES ---------- */
+.wave{position:relative;height:64px;overflow:hidden;line-height:0;margin-top:-1px}
+.wave svg{position:absolute;bottom:0;left:0;width:200%;height:100%;animation:drift 20s linear infinite}
+.wave svg.back{opacity:.45;animation-duration:28s;animation-direction:reverse}
+@keyframes drift{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-/* ---------- nav ---------- */
-header{
-  position:fixed;top:0;left:0;right:0;z-index:100;
-  background:rgba(20,18,14,.82);
-  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
-  border-bottom:1px solid rgba(201,161,74,.18);
-}
-.nav{
-  max-width:1120px;margin:0 auto;padding:0 22px;
-  height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px;
-}
-.brand{display:flex;align-items:center;gap:12px;line-height:1.1}
-.brand-logo{height:42px;width:auto;flex:none}
-.brand-text{display:flex;flex-direction:column;line-height:1.1}
-.brand .b1{font-family:'Sora',sans-serif;font-weight:700;font-size:1.06rem;letter-spacing:.12em;color:var(--gold)}
-.brand .b2{font-size:.72rem;letter-spacing:.28em;color:var(--text-mut);text-transform:uppercase}
-.nav-links{display:flex;align-items:center;gap:26px}
-.nav-links a{font-size:.95rem;font-weight:500;color:var(--text-dark);transition:color .25s}
-.nav-links a:hover{color:var(--gold-soft)}
-.call-pill{
-  display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 16px;
-  border:1px solid var(--gold);border-radius:999px;color:var(--gold);
-  font-weight:600;font-size:.92rem;line-height:1;transition:background .25s,color .25s;
-}
-.call-pill:hover{background:var(--gold);color:var(--ink)}
-.call-pill svg{width:15px;height:15px}
-#menu-btn{
-  display:none;background:none;border:1px solid rgba(201,161,74,.35);border-radius:10px;
-  width:44px;height:44px;color:var(--text-dark);cursor:pointer;align-items:center;justify-content:center;
-}
-#menu-btn svg{width:22px;height:22px}
-#mobile-menu{
-  display:none;flex-direction:column;gap:4px;padding:10px 22px 18px;
-  background:rgba(20,18,14,.97);border-bottom:1px solid rgba(201,161,74,.18);
-}
-#mobile-menu a{padding:12px 4px;font-size:1.05rem;border-bottom:1px solid rgba(234,228,214,.06)}
-#mobile-menu.open{display:flex}
-
-/* ---------- hero ---------- */
-.hero{
-  position:relative;min-height:100dvh;display:flex;align-items:flex-end;
-  background:var(--ink);overflow:hidden;
-}
-.hero-slides{position:absolute;inset:0}
-.hero-slides img{
-  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
-  opacity:0;transition:opacity 1.6s ease;
-  filter:saturate(.8) contrast(1.05);
-}
-.hero-slides img.on{opacity:1}
-.hero::after{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(20,18,14,.55) 0%,rgba(20,18,14,.45) 45%,rgba(20,18,14,.92) 100%);
-}
-.hero-inner{position:relative;z-index:2;width:100%;padding:120px 0 72px}
-.eyebrow{
-  display:inline-block;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;
-  color:var(--gold-soft);font-weight:600;margin-bottom:18px;
-}
-.hero h1{
-  font-size:clamp(2.5rem,6vw,4.1rem);font-weight:700;color:#fdfaf2;
-  max-width:15ch;margin-bottom:18px;letter-spacing:-.02em;
-}
-.hero p.lede{max-width:46ch;font-size:1.08rem;color:var(--text-dark);margin-bottom:28px}
-.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:34px}
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:9px;
-  min-height:52px;padding:0 26px;border-radius:999px;font-weight:600;font-size:1rem;
-  transition:transform .2s var(--ease),background .25s,color .25s,border-color .25s;
-}
-.btn:active{transform:scale(.98)}
-.btn svg{width:17px;height:17px}
-.btn-gold{background:var(--gold);color:var(--ink)}
-.btn-gold:hover{background:var(--gold-soft);color:var(--ink)}
-.btn-line{border:1px solid rgba(244,239,229,.5);color:#fdfaf2}
-.btn-line:hover{border-color:var(--gold-soft);color:#fdfaf2}
-.hero-quote{
-  max-width:430px;border-radius:var(--radius);padding:18px 20px;
-  background:rgba(28,25,19,.55);border:1px solid rgba(244,239,229,.16);
-  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
-}
-.hero-quote .stars{display:flex;gap:3px;margin-bottom:8px}
-.hero-quote .stars svg{width:15px;height:15px;fill:var(--gold);stroke:none}
-.hero-quote blockquote{font-size:.95rem;line-height:1.55;color:var(--text-dark);min-height:66px;transition:opacity .5s ease}
-.hero-quote .who{margin-top:8px;font-size:.82rem;color:var(--text-mut);font-weight:500}
-.hero-quote .gsrc{font-size:.75rem;color:var(--text-mut)}
-
-/* ---------- sections shared ---------- */
-section{padding:96px 0}
-.sec-head{max-width:640px;margin-bottom:52px}
-.sec-head h2{font-size:clamp(1.9rem,3.6vw,2.6rem);letter-spacing:-.015em;margin-bottom:14px}
-.sec-head p{color:var(--text-mut);max-width:56ch}
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
-.reveal.in{opacity:1;transform:none}
-@media (prefers-reduced-motion: reduce){
-  .reveal{opacity:1;transform:none;transition:none}
+/* ---------- NAV ---------- */
+.nav{position:sticky;top:0;z-index:60;background:rgba(18,17,16,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(208,174,64,.18)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:72px}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-family:var(--display);font-weight:700;font-size:1.02rem;letter-spacing:-.01em;white-space:nowrap;line-height:1.05}
+.logo img{width:44px;height:auto}
+.logo small{display:block;font-family:var(--body);font-weight:800;font-size:.62rem;letter-spacing:.24em;color:var(--accent)}
+.nav-links{display:flex;gap:4px;list-style:none;margin:0;padding:0}
+.nav-links a{display:block;color:#ebe6da;text-decoration:none;font-weight:700;font-size:.95rem;padding:9px 14px;border-radius:99px;transition:background .2s,color .2s}
+.nav-links a:hover{background:rgba(208,174,64,.16);color:#fff}
+.nav-right{display:flex;align-items:center;gap:10px}
+.nav-call{min-height:46px;padding:8px 18px}
+.burger{display:none;background:rgba(255,255,255,.08);border:0;color:#fff;width:46px;height:46px;border-radius:50%;padding:12px;cursor:pointer}
+@media (max-width:980px){
+  .burger{display:block}
+  .nav-links{display:none;position:absolute;top:72px;left:12px;right:12px;flex-direction:column;background:var(--ink-2);padding:12px;border-radius:var(--r);box-shadow:0 22px 44px -16px rgba(0,0,0,.6);border:1px solid rgba(208,174,64,.2)}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:14px 16px}
+  .nav-call .label{display:none}
+  .nav-call{width:46px;padding:0}
 }
 
-/* ---------- services ---------- */
-#services{background:var(--ink)}
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.svc-card{
-  background:var(--panel);border:1px solid rgba(244,239,229,.07);border-radius:var(--radius);
-  overflow:hidden;transition:transform .35s var(--ease),border-color .35s;
-}
-.svc-card:hover{transform:translateY(-5px);border-color:rgba(201,161,74,.45)}
-.svc-card .ph{aspect-ratio:4/3;overflow:hidden}
-.svc-card .ph img{
-  width:100%;height:100%;object-fit:cover;display:block;
-  filter:saturate(.8) contrast(1.05);transition:transform .6s var(--ease);
-}
-.svc-card:hover .ph img{transform:scale(1.05)}
-.svc-body{padding:20px 22px 24px}
-.svc-tag{
-  display:inline-flex;align-items:center;gap:7px;font-size:.7rem;font-weight:600;
-  letter-spacing:.18em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:10px;
-}
-.svc-tag svg{width:14px;height:14px}
-.svc-body h3{font-size:1.12rem;margin-bottom:8px;color:#fdfaf2}
-.svc-body p{font-size:.93rem;color:var(--text-mut);line-height:1.6}
+/* ---------- HERO ---------- */
+.hero{background:var(--ink);color:#fff;padding:0;min-height:min(88vh,820px);display:flex;align-items:center;overflow:hidden}
+.hero .slides{position:absolute;inset:0}
+.hero .slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.08);transition:opacity 1.4s ease,transform 7s ease;filter:saturate(.85) contrast(1.05)}
+.hero .slides img.active{opacity:1;transform:scale(1)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,17,16,.9) 0%,rgba(18,17,16,.62) 55%,rgba(18,17,16,.45) 100%),linear-gradient(0deg,rgba(18,17,16,.55),rgba(18,17,16,0) 40%)}
+.hero .wrap{position:relative;z-index:2;width:100%;padding-top:72px;padding-bottom:96px}
+.hero .eyebrow{background:rgba(208,174,64,.16);color:var(--accent);border:1px solid rgba(208,174,64,.35)}
+.hero h1{font-size:clamp(2.1rem,5.6vw,4.3rem);max-width:820px;margin-bottom:20px}
+.hero h1 em{font-style:normal;color:var(--accent);white-space:nowrap}
+.hero .lead{font-size:clamp(1.05rem,1.8vw,1.22rem);color:#e2ddd2;max-width:560px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0 30px}
+.rating{display:inline-flex;align-items:center;gap:14px;padding:12px 18px;border-radius:var(--r);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);font-size:.92rem;line-height:1.3;color:#fff;text-decoration:none}
+.rating strong{font-family:var(--display);font-size:1.6rem;line-height:1}
+.stars{color:var(--star);letter-spacing:1px}
+.hero-controls{position:absolute;right:20px;bottom:24px;z-index:3;display:flex;align-items:center;gap:12px}
+.slide-dots{display:flex;gap:6px}
+.slide-dots i{width:8px;height:8px;border-radius:99px;background:rgba(255,255,255,.45);transition:width .4s,background .4s}
+.slide-dots i.on{width:24px;background:var(--accent)}
+.slide-toggle{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(18,17,16,.55);color:#fff;display:grid;place-items:center;cursor:pointer;backdrop-filter:blur(8px)}
+.slide-toggle svg{width:18px;height:18px}
+.slide-toggle .i-play{display:none}
+.slide-toggle[aria-pressed="true"] .i-play{display:block}
+.slide-toggle[aria-pressed="true"] .i-pause{display:none}
+@media (max-width:600px){.hero .wrap{padding-top:48px;padding-bottom:100px}.hero-ctas .btn{width:100%}.hero-controls{right:16px;bottom:18px}}
 
-/* ---------- about ---------- */
-#about{background:var(--bone);color:var(--text-ink)}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.about-photo{position:relative}
-.about-photo img{
-  width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius);display:block;
-  filter:saturate(.8) contrast(1.05);
-}
-.about-photo .corner{
-  position:absolute;left:-12px;bottom:-12px;background:var(--ink);color:var(--gold);
-  font-family:'Sora',sans-serif;font-weight:600;font-size:.82rem;letter-spacing:.08em;
-  padding:12px 18px;border-radius:10px;
-}
-.about-copy h2{font-size:clamp(1.9rem,3.4vw,2.5rem);color:var(--text-ink);margin-bottom:16px;letter-spacing:-.015em}
-.about-copy p{color:var(--text-ink-soft);margin-bottom:14px;max-width:52ch}
-.checks{list-style:none;margin-top:22px;display:grid;gap:12px}
-.checks li{display:flex;gap:12px;align-items:flex-start;font-weight:500;color:var(--text-ink)}
-.checks svg{width:20px;height:20px;color:var(--gold);flex-shrink:0;margin-top:3px}
+/* ---------- TRUST ---------- */
+.trust{padding:0;background:var(--bone)}
+.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;transform:translateY(-44px);position:relative;z-index:5}
+.trust-item{display:flex;gap:16px;align-items:flex-start;background:#fff;border-radius:var(--r);padding:24px;border:1px solid var(--line);box-shadow:0 18px 40px -26px rgba(18,17,16,.45)}
+.trust-item .ic{width:52px;height:52px;border-radius:16px;background:var(--ink);color:var(--accent);display:grid;place-items:center;flex:none}
+.trust-item strong{display:block;font-family:var(--display);font-weight:600;font-size:1rem;margin-bottom:2px}
+.trust-item span{color:var(--muted);font-size:.95rem}
+@media (max-width:860px){.trust-grid{grid-template-columns:1fr;transform:none;padding-top:28px;padding-bottom:28px}}
 
-/* ---------- crew ---------- */
-#crew{background:var(--ink)}
-.crew-note{
-  display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--text-mut);border:1px solid rgba(179,171,151,.35);border-radius:999px;
-  padding:5px 13px;margin-bottom:16px;
-}
-.crew-grid{display:grid;grid-template-columns:repeat(2,minmax(0,340px));gap:22px}
-.crew-card{
-  background:var(--panel);border:1px solid rgba(244,239,229,.07);border-radius:var(--radius);
-  padding:28px 24px;display:flex;gap:18px;align-items:center;
-}
-.avatar{
-  width:64px;height:64px;border-radius:50%;flex-shrink:0;
-  background:var(--panel-2);border:2px solid var(--gold);
-  display:flex;align-items:center;justify-content:center;
-  font-family:'Sora',sans-serif;font-weight:700;color:var(--gold);font-size:1.15rem;letter-spacing:.05em;
-}
-.crew-card h3{font-size:1.05rem;color:#fdfaf2;margin-bottom:4px}
-.crew-card p{font-size:.9rem;color:var(--text-mut);line-height:1.55}
+/* ---------- BRANDS MARQUEE ---------- */
+.brands{background:var(--bone);padding:0 0 30px;overflow:hidden}
+.brands p{text-align:center;color:var(--muted);font-weight:700;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;margin:0 0 14px}
+.marquee{display:flex;gap:48px;width:max-content;animation:marquee 32s linear infinite}
+.marquee span{font-family:var(--display);font-weight:600;font-size:clamp(1.2rem,2.4vw,1.7rem);color:#2b2823;opacity:.8;white-space:nowrap}
+.marquee span::after{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent);margin-left:48px;vertical-align:middle}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-/* ---------- reviews ---------- */
-#reviews{background:var(--bone-2);color:var(--text-ink)}
-#reviews .sec-head h2{color:var(--text-ink)}
-#reviews .sec-head p{color:var(--text-ink-soft)}
-.rev-layout{display:grid;grid-template-columns:300px 1fr;gap:22px;align-items:stretch}
-.rating-panel{
-  background:var(--ink);border-radius:var(--radius);padding:32px 28px;
-  display:flex;flex-direction:column;justify-content:center;gap:10px;
-}
-.rating-panel .big{font-family:'Sora',sans-serif;font-size:3.2rem;font-weight:700;color:var(--gold);line-height:1}
-.rating-panel .stars{display:flex;gap:4px}
-.rating-panel .stars svg{width:18px;height:18px;fill:var(--gold)}
-.rating-panel p{color:var(--text-mut);font-size:.92rem;line-height:1.5}
-.rev-cards{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.rev-card{
-  background:#fdfbf5;border:1px solid rgba(33,29,21,.08);border-radius:var(--radius);
-  padding:26px 26px 24px;display:flex;flex-direction:column;gap:12px;
-}
-.rev-card .stars{display:flex;gap:3px}
-.rev-card .stars svg{width:15px;height:15px;fill:var(--gold)}
-.rev-card blockquote{font-size:.96rem;color:var(--text-ink);line-height:1.65}
-.rev-card .who{font-weight:600;font-size:.9rem;color:var(--text-ink)}
-.rev-card .when{color:var(--text-ink-soft);font-weight:400}
-.rev-actions{margin-top:34px;display:flex;flex-wrap:wrap;gap:14px}
-.btn-ink{background:var(--ink);color:var(--bone)}
-.btn-ink:hover{background:#2b261c}
-.btn-ink-line{border:1px solid rgba(33,29,21,.35);color:var(--text-ink)}
-.btn-ink-line:hover{border-color:var(--ink)}
-
-/* ---------- review banner ---------- */
-#leave-review{
-  background:linear-gradient(120deg,var(--panel) 0%,var(--ink) 100%);
-  border-top:1px solid rgba(201,161,74,.2);border-bottom:1px solid rgba(201,161,74,.2);
-  padding:64px 0;
-}
-.banner-flex{display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap}
-.banner-flex h2{font-size:clamp(1.5rem,2.8vw,2rem);color:#fdfaf2;max-width:24ch;letter-spacing:-.01em}
-.banner-flex p{color:var(--text-mut);margin-top:6px;max-width:44ch}
-
-/* ---------- contact ---------- */
-#contact{background:var(--ink)}
-.contact-card{
-  background:var(--panel);border:1px solid rgba(244,239,229,.08);border-radius:18px;
-  overflow:hidden;display:grid;grid-template-columns:1fr 1fr;
-}
-.contact-map{min-height:420px}
-.contact-map iframe{width:100%;height:100%;border:0;display:block;filter:grayscale(.25) contrast(1.05)}
-.contact-info{padding:38px 36px;display:flex;flex-direction:column;gap:22px}
-.contact-info h2{font-size:1.7rem;color:#fdfaf2;letter-spacing:-.01em}
-.contact-btns{display:flex;flex-direction:column;gap:12px}
-.contact-btns .btn{width:100%}
-.info-rows{display:grid;gap:14px}
-.info-row{display:flex;gap:14px;align-items:flex-start;font-size:.95rem}
-.info-row svg{width:19px;height:19px;color:var(--gold);flex-shrink:0;margin-top:4px}
-.info-row a:hover{color:var(--gold-soft)}
-.info-row .lbl{color:var(--text-mut);font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;display:block}
-.socials{display:flex;gap:12px;margin-top:2px}
-.socials a{
-  width:44px;height:44px;border-radius:12px;border:1px solid rgba(244,239,229,.15);
-  display:inline-flex;align-items:center;justify-content:center;color:var(--text-dark);
-  transition:color .25s,border-color .25s,transform .2s;
-}
-.socials a:hover{color:var(--gold);border-color:var(--gold);transform:translateY(-2px)}
-.socials svg{width:19px;height:19px;fill:currentColor}
-
-/* ---------- footer ---------- */
-footer{background:#0f0d0a;padding:52px 0 36px;border-top:1px solid rgba(201,161,74,.15)}
-.foot-grid{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap}
-.foot-brand img{height:150px;width:auto;display:block}
-.foot-brand p{color:var(--text-mut);font-size:.88rem;margin-top:12px;max-width:34ch}
-.foot-col h3{font-size:.8rem;text-transform:uppercase;letter-spacing:.16em;color:var(--gold-soft);margin-bottom:14px}
-.foot-col ul{list-style:none;display:grid;gap:9px}
-.foot-col a{color:var(--text-mut);font-size:.92rem;transition:color .25s}
-.foot-col a:hover{color:var(--text-dark)}
-.foot-base{
-  margin-top:40px;padding-top:22px;border-top:1px solid rgba(234,228,214,.08);
-  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
-  color:var(--text-mut);font-size:.83rem;
-}
-
-/* ---------- responsive ---------- */
-@media (max-width:900px){
-  .svc-grid{grid-template-columns:1fr 1fr}
-  .rev-layout{grid-template-columns:1fr}
-  .rating-panel{flex-direction:row;align-items:center;flex-wrap:wrap;gap:18px}
-  .contact-card{grid-template-columns:1fr}
-  .contact-map{order:2;min-height:320px}
-  .contact-info{order:1}
-  .about-grid{grid-template-columns:1fr;gap:40px}
-}
+/* ---------- SERVICES (BENTO) ---------- */
+.services{background:var(--bg)}
+.bento{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.svc{position:relative;border-radius:var(--r-lg);overflow:hidden;background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;transition:transform .35s cubic-bezier(.34,1.56,.64,1),box-shadow .35s}
+.svc:hover{box-shadow:0 26px 50px -26px rgba(18,17,16,.45)}
+.svc .img{overflow:hidden;aspect-ratio:16/10}
+.svc .img img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease;filter:saturate(.85) contrast(1.05)}
+.svc:hover .img img{transform:scale(1.06)}
+.svc .body{padding:20px 22px 24px}
+.svc .body p{color:var(--muted);margin:0;font-size:.96rem}
+.svc .tag{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.04em;color:var(--accent-dark);background:var(--accent-soft);padding:3px 10px;border-radius:99px;margin-bottom:10px}
+.svc.big{grid-column:span 2;grid-row:span 2;color:#fff;border:0;min-height:520px}
+.svc.big .img{position:absolute;inset:0;aspect-ratio:auto}
+.svc.big::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,17,16,.05) 30%,rgba(18,17,16,.9))}
+.svc.big .body{position:relative;z-index:2;margin-top:auto;padding:32px}
+.svc.big h3{font-size:1.7rem}
+.svc.big .body p{color:#e6e0d3;font-size:1.04rem;max-width:440px}
+.svc.big .tag{background:rgba(208,174,64,.22);color:#f3dc8f}
+.svc.wide{grid-column:span 2;flex-direction:row}
+.svc.wide .img{aspect-ratio:auto;flex:1 1 45%;min-height:220px}
+.svc.wide .body{flex:1 1 55%;align-self:center}
+.svc.accent{grid-column:1/-1;background:var(--ink);color:#fff;border:0;flex-direction:row;align-items:center;justify-content:space-between;gap:20px;padding:34px 36px;flex-wrap:wrap}
+.svc.accent h3{font-size:1.4rem;margin-bottom:6px}
+.svc.accent p{color:#d6d0c3;margin:0}
+@media (max-width:1000px){.bento{grid-template-columns:repeat(2,1fr)}.svc.big{min-height:440px}}
 @media (max-width:640px){
-  .nav-links{display:none}
-  #menu-btn{display:inline-flex}
-  section{padding:72px 0}
-  .svc-grid{grid-template-columns:1fr}
-  .rev-cards{grid-template-columns:1fr}
-  .crew-grid{grid-template-columns:1fr}
-  .hero-inner{padding:104px 0 56px}
-  .hero p.lede{font-size:1rem}
-  .cta-row .btn{flex:1 1 100%;min-height:54px}
-  .banner-flex{flex-direction:column;align-items:flex-start}
-  .contact-info{padding:28px 22px}
-  .about-photo .corner{left:10px;bottom:-14px}
+  .bento{grid-template-columns:1fr}
+  .svc.big,.svc.wide{grid-column:auto;grid-row:auto}
+  .svc.big{min-height:420px}
+  .svc.wide{flex-direction:column}
+  .svc.wide .img{aspect-ratio:16/10;flex:none;min-height:0}
+  .svc.accent{padding:28px 24px}
+}
+
+/* ---------- STATS ---------- */
+.stats{padding:0 0 92px;background:var(--bg)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;background:var(--ink);color:#fff;border-radius:var(--r-lg);padding:42px 32px;position:relative;overflow:hidden}
+.stats-grid::before{content:"";position:absolute;width:280px;height:280px;border-radius:50%;background:var(--accent);opacity:.16;right:-90px;top:-130px}
+.stat{position:relative;text-align:center}
+.stat b{display:block;font-family:var(--display);font-weight:700;font-size:clamp(2.2rem,4.6vw,3.2rem);line-height:1;color:var(--accent);margin-bottom:8px}
+.stat span{color:#d6d0c3;font-weight:700;font-size:.93rem}
+@media (max-width:760px){.stats-grid{grid-template-columns:repeat(2,1fr);row-gap:32px;padding:38px 18px}}
+
+/* ---------- ABOUT ---------- */
+.about{background:var(--bone)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about-photo{position:relative}
+.about-photo .main{border-radius:var(--r-lg);overflow:hidden;aspect-ratio:4/3;box-shadow:0 26px 52px -26px rgba(18,17,16,.55)}
+.about-photo .main img{width:100%;height:100%;object-fit:cover}
+.about-photo .inset{position:absolute;width:44%;right:-14px;bottom:-34px;border-radius:var(--r);overflow:hidden;border:6px solid #fff;box-shadow:0 20px 40px -20px rgba(18,17,16,.55);aspect-ratio:4/3}
+.about-photo .inset img{width:100%;height:100%;object-fit:cover}
+.corner-tag{position:absolute;left:18px;top:18px;background:var(--accent);color:var(--ink);font-weight:800;padding:10px 18px;border-radius:99px;box-shadow:0 12px 24px -10px rgba(0,0,0,.5);font-size:.9rem}
+.checklist{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:12px}
+.checklist li{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid var(--line);padding:13px 18px;border-radius:99px;font-weight:700}
+.checklist .ck{width:30px;height:30px;border-radius:50%;background:var(--ink);color:var(--accent);display:grid;place-items:center;flex:none}
+.checklist .ck svg{width:16px;height:16px}
+@media (max-width:900px){.split{grid-template-columns:1fr;gap:56px}.about-photo .inset{right:8px;bottom:-26px}}
+
+/* ---------- TEAM ---------- */
+.team{background:var(--bg)}
+.team-card{max-width:640px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:34px;display:flex;gap:26px;align-items:center}
+.avatar{width:96px;height:96px;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:2rem;color:var(--accent);background:var(--ink);box-shadow:0 0 0 5px #fff,0 0 0 8px var(--accent);flex:none}
+.team-card p{color:var(--muted);margin:0}
+.team-card .role{color:var(--accent-dark);font-weight:800;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px}
+@media (max-width:600px){.team-card{flex-direction:column;text-align:center;padding:30px 24px}}
+
+/* ---------- REVIEWS ---------- */
+.reviews{background:var(--bone)}
+.reviews-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.review{background:#fff;border-radius:var(--r-lg);padding:28px;display:flex;flex-direction:column;gap:14px;border:1px solid var(--line);position:relative}
+.review .quote{position:absolute;right:22px;top:18px;width:40px;height:40px;color:var(--accent-soft)}
+.review p{margin:0;flex:1;font-size:.99rem}
+.review footer{display:flex;align-items:center;gap:12px;font-size:.9rem;color:var(--muted)}
+.review footer .mini{width:40px;height:40px;border-radius:50%;background:var(--ink);color:var(--accent);display:grid;place-items:center;font-weight:800;flex:none}
+.review footer strong{color:var(--ink);display:block}
+.center-cta{text-align:center;margin-top:40px}
+@media (max-width:1100px){.reviews-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.reviews-grid{grid-template-columns:1fr}}
+
+/* ---------- LEAVE A REVIEW ---------- */
+.leave{padding:0 0 92px;background:var(--bone)}
+.leave-box{background:var(--ink);color:#fff;border-radius:var(--r-lg);padding:44px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;position:relative;overflow:hidden}
+.leave-box::before{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:var(--accent);opacity:.14;left:-70px;bottom:-110px}
+.leave-box>*{position:relative}
+.leave-box h2{margin:0;font-size:clamp(1.4rem,3vw,2rem)}
+.leave-box p{margin:8px 0 0;color:#d6d0c3}
+
+/* ---------- FAQ ---------- */
+.faq{background:var(--bg)}
+.faq-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.faq-list details{background:#fff;border:1px solid var(--line);border-radius:var(--r);margin-bottom:12px;transition:border-color .2s,box-shadow .2s}
+.faq-list details[open]{border-color:var(--accent);box-shadow:0 14px 30px -22px rgba(125,100,19,.7)}
+.faq-list summary{list-style:none;cursor:pointer;padding:20px 64px 20px 24px;font-weight:800;font-size:1.03rem;position:relative;min-height:48px}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:"";position:absolute;right:20px;top:50%;width:30px;height:30px;margin-top:-15px;border-radius:50%;background:var(--ink) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d0ae40' stroke-width='2.5' stroke-linecap='round'%3E%3Cpath d='M12 6v12M6 12h12'/%3E%3C/svg%3E") center/16px no-repeat;transition:transform .3s cubic-bezier(.34,1.56,.64,1)}
+.faq-list details[open] summary::after{transform:rotate(45deg)}
+.faq-list details p{padding:0 24px 22px;margin:0;color:var(--muted)}
+@media (max-width:900px){.faq-wrap{grid-template-columns:1fr;gap:20px}}
+
+/* ---------- CONTACT ---------- */
+.contact{background:var(--ink);color:#fff}
+.contact .eyebrow{background:rgba(208,174,64,.14);color:var(--accent)}
+.contact .split{align-items:start}
+.contact-rows{list-style:none;padding:0;margin:26px 0}
+.contact-rows li{display:flex;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.contact-rows .ic{width:40px;height:40px;border-radius:50%;background:rgba(208,174,64,.14);color:var(--accent);display:grid;place-items:center;flex:none}
+.contact-rows .ic svg{width:20px;height:20px}
+.contact-rows a{color:#fff;text-decoration:none;word-break:break-word}
+.contact-card{background:rgba(255,255,255,.05);border:1px solid rgba(208,174,64,.25);border-radius:var(--r-lg);padding:34px;display:flex;flex-direction:column;gap:14px}
+.contact-card h3{margin:0 0 4px;font-size:1.3rem}
+.contact-card p{color:#d6d0c3;margin:0 0 8px}
+.contact-card .btn{min-height:64px;font-size:1.06rem}
+.socials{display:flex;gap:10px}
+.socials a{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.1);color:#fff;transition:background .2s,color .2s,transform .3s cubic-bezier(.34,1.56,.64,1)}
+.socials a:hover{background:var(--accent);color:var(--ink);transform:translateY(-3px)}
+.socials svg{width:20px;height:20px}
+
+/* ---------- MAP ---------- */
+.map{padding:0 0 92px;background:var(--ink)}
+.map iframe{width:100%;height:400px;border:0;border-radius:var(--r-lg);display:block}
+
+/* ---------- FOOTER ---------- */
+.footer{background:#0a0908;color:#a8a294;padding:40px 0;font-size:.93rem}
+.footer .wrap{display:flex;flex-wrap:wrap;gap:22px;align-items:center;justify-content:space-between}
+.footer .flogo{display:flex;align-items:center;gap:14px}
+.footer .flogo img{width:64px;height:auto}
+.footer a{color:#e7e1d4;text-decoration:none}
+.footer a:hover{color:var(--accent)}
+.footer-links{display:flex;flex-wrap:wrap;gap:18px}
+
+@media (max-width:600px){section{padding:66px 0}.stats,.leave,.map{padding-bottom:66px}.map iframe{height:300px}.leave-box{padding:32px 24px}.contact-card{padding:26px}}
+
+/* ---------- REVEAL ---------- */
+.js .pop{opacity:0;transform:translateY(26px) scale(.95);transition:opacity .6s ease,transform .8s cubic-bezier(.34,1.56,.64,1);transition-delay:var(--d,0s)}
+.js .pop.in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .js .pop{opacity:1;transform:none}
+  .hero .slides img{transform:none}
 }
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<div id="intro" aria-hidden="true"><span class="mark">FIXOLOGY TECHPRO</span></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+  <!-- stopwatch: fast fixes -->
+  <symbol id="i-fast" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M10 2h4M12 2v3M19 6l1.5-1.5"/></symbol>
+  <!-- price tag: fair prices -->
+  <symbol id="i-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></symbol>
+  <!-- screwdriver + phone: proper repairs -->
+  <symbol id="i-repair" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="2" width="11" height="20" rx="2"/><path d="M8 18h1"/><path d="m21 4-5.5 5.5M14.5 10.5l-1.5 3 3-1.5"/></symbol>
+  <symbol id="i-quote" viewBox="0 0 24 24" fill="currentColor"><path d="M3 21c3 0 7-1 7-8V5H3v7h4c0 3-1.5 5-4 5v4zm11 0c3 0 7-1 7-8V5h-7v7h4c0 3-1.5 5-4 5v4z"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.9l10-6.5a1 1 0 0 0 0-1.7l-10-6.6A1 1 0 0 0 8 5.5z"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8.5V6.8c0-.8.2-1.3 1.4-1.3H17V2.2c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.5V12h2.8v10H14V12h2.8l.4-3.5z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-tt" viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.4v13.4a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9.1a6.3 6.3 0 1 0 5.4 6.3V8.6a8 8 0 0 0 4.6 1.5V6.7a4.7 4.7 0 0 1-4.6-4.7z"/></symbol>
+  <symbol id="wave-path" viewBox="0 0 1440 64" preserveAspectRatio="none"><path d="M0 32 C 180 64 360 0 540 32 S 900 64 1080 32 S 1260 0 1440 32 V64 H0 Z"/></symbol>
+</svg>
 
-<header>
-  <nav class="nav" aria-label="Main">
-    <a href="#top" class="brand" aria-label="Fixology Techpro home">
-      <img class="brand-logo" src="img/logo-mark.png" alt="" width="42" height="40">
-      <span class="brand-text">
-        <span class="b1">FIXOLOGY</span>
-        <span class="b2">Techpro</span>
-      </span>
+<!-- 1. NAV -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Fixology Techpro home">
+      <img src="img/logo-mark.png" alt="" width="949" height="900">
+      <span>FIXOLOGY TECH<small>WE FIX 4U</small></span>
     </a>
-    <div class="nav-links">
-      <a href="#services">Repairs</a>
-      <a href="#about">About</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#contact">Find us</a>
-      <a class="call-pill" href="tel:+64275738028">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        027 573 8028
-      </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#repairs">Repairs</a></li>
+      <li><a href="#about">The shop</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a class="btn btn-primary nav-call" href="tel:+64275738028" aria-label="Call 027 573 8028"><svg class="icon"><use href="#i-phone"/></svg><span class="label">027 573 8028</span></a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+      </button>
     </div>
-    <button id="menu-btn" aria-label="Open menu" aria-expanded="false">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
-    </button>
-  </nav>
-  <div id="mobile-menu">
-    <a href="#services">Repairs</a>
-    <a href="#about">About</a>
-    <a href="#reviews">Reviews</a>
-    <a href="#contact">Find us</a>
-    <a href="tel:+64275738028"><strong>Call 027 573 8028</strong></a>
   </div>
 </header>
 
-<main id="top">
+<main id="main">
+<span id="top"></span>
 
-  <!-- HERO -->
-  <section class="hero" aria-label="Welcome">
-    <div class="hero-slides" aria-hidden="true">
-      <img src="img/hero-1.jpg" alt="" class="on" fetchpriority="high" width="1800" height="1201">
-      <img src="img/hero-2.jpg" alt="" loading="lazy" decoding="async" width="1800" height="1200">
-      <img src="img/hero-3.jpg" alt="" loading="lazy" decoding="async" width="1800" height="1274">
+<!-- 2. HERO -->
+<section class="hero" aria-label="Introduction">
+  <div class="slides" id="heroSlides">
+    <img class="active" src="img/hero-1-1920.webp" srcset="img/hero-1-1080.webp 1080w, img/hero-1-1920.webp 1920w, img/hero-1-3840.webp 3840w" sizes="100vw" alt="" width="1920" height="1280" fetchpriority="high">
+    <img src="img/hero-2-1920.webp" srcset="img/hero-2-1080.webp 1080w, img/hero-2-1920.webp 1920w, img/hero-2-3840.webp 3840w" sizes="100vw" alt="" width="1920" height="1280" loading="lazy">
+    <img src="img/hero-3-1920.webp" srcset="img/hero-3-1080.webp 1080w, img/hero-3-1920.webp 1920w, img/hero-3-3840.webp 3840w" sizes="100vw" alt="" width="1920" height="1280" loading="lazy">
+  </div>
+  <div class="wrap">
+    <span class="eyebrow">Te Puke · Phone &amp; computer repairs</span>
+    <h1>Phone, tablet and laptop repairs in <em>Te Puke</em>.</h1>
+    <p class="lead">Cracked screens, tired batteries, smashed back glass and laptops that won't play ball. Bring it in to our shop on Jellicoe Street and we'll fix it for you.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="tel:+64275738028"><svg class="icon"><use href="#i-phone"/></svg>Call 027 573 8028</a>
+      <a class="btn btn-outline-light" href="#contact"><svg class="icon"><use href="#i-mail"/></svg>Ask for a repair price</a>
     </div>
-    <div class="hero-inner">
-      <div class="wrap">
-        <span class="eyebrow">Te Puke, Bay of Plenty</span>
-        <h1>Phone and computer repairs, sorted in Te Puke.</h1>
-        <p class="lede">Cracked screen, flat battery or a laptop crawling along? Bring it in to 39 Jellicoe Street and we will tell you the price before any work starts.</p>
-        <div class="cta-row">
-          <a class="btn btn-gold" href="tel:+64275738028">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Call 027 573 8028
-          </a>
-          <a class="btn btn-line" href="#contact">Find us</a>
-        </div>
-        <div class="hero-quote" id="hero-quote">
-          <div class="stars" aria-label="Five star review">
-            <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.87.6-5.2 4.56 1.55 6.72L12 16.56 5.88 20.14l1.55-6.72-5.2-4.56 6.87-.6z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.87.6-5.2 4.56 1.55 6.72L12 16.56 5.88 20.14l1.55-6.72-5.2-4.56 6.87-.6z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.87.6-5.2 4.56 1.55 6.72L12 16.56 5.88 20.14l1.55-6.72-5.2-4.56 6.87-.6z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.87.6-5.2 4.56 1.55 6.72L12 16.56 5.88 20.14l1.55-6.72-5.2-4.56 6.87-.6z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.87.6-5.2 4.56 1.55 6.72L12 16.56 5.88 20.14l1.55-6.72-5.2-4.56 6.87-.6z"/></svg>
-          </div>
-          <blockquote id="hq-text"></blockquote>
-          <div class="who"><span id="hq-name"></span> <span class="gsrc">on Google</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <a class="rating" href="https://search.google.com/local/reviews?placeid=ChIJCVLv5TR5bm0Rib0fr4s7G1A" target="_blank" rel="noopener">
+      <strong>4.6</strong>
+      <span><span class="stars" aria-hidden="true">★★★★★</span><br>from 13 Google reviews</span>
+    </a>
+  </div>
+  <div class="hero-controls">
+    <div class="slide-dots" id="dots" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+    <button class="slide-toggle" id="slideToggle" type="button" aria-label="Pause slideshow" aria-pressed="false">
+      <svg class="i-pause" aria-hidden="true"><use href="#i-pause"/></svg>
+      <svg class="i-play" aria-hidden="true"><use href="#i-play"/></svg>
+    </button>
+  </div>
+</section>
 
-  <!-- SERVICES -->
-  <section id="services">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <h2>What we fix</h2>
-        <p>Phones, tablets, laptops and desktops. Walk in with the device, or call first and we will tell you what it needs.</p>
-      </div>
-      <div class="svc-grid">
-        <article class="svc-card reveal">
-          <div class="ph"><img src="img/svc-screens.jpg" alt="Smartphone with an intact replacement screen lying on a white surface" loading="lazy" width="900" height="1124"></div>
-          <div class="svc-body">
-            <span class="svc-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg>Phones</span>
-            <h3>Screen replacement</h3>
-            <p>Cracked or dead screens replaced on most makes and models, with the touch and display tested before you pick it up.</p>
-          </div>
-        </article>
-        <article class="svc-card reveal">
-          <div class="ph"><img src="img/svc-battery.jpg" alt="Phone and earbuds on a dark wooden bench" loading="lazy" width="900" height="1591"></div>
-          <div class="svc-body">
-            <span class="svc-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="16" height="10" rx="2"/><line x1="22" y1="11" x2="22" y2="13"/></svg>Power</span>
-            <h3>Battery and charging</h3>
-            <p>Batteries that will not hold charge, dodgy charging ports and phones that die at 40 percent. Swapped and tested.</p>
-          </div>
-        </article>
-        <article class="svc-card reveal">
-          <div class="ph"><img src="img/svc-backglass.jpg" alt="The rear glass panels of two modern smartphones" loading="lazy" width="900" height="600"></div>
-          <div class="svc-body">
-            <span class="svc-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg>Housing</span>
-            <h3>Back glass and housing</h3>
-            <p>Shattered back glass, bent frames and worn buttons put right so the phone feels solid in your hand again.</p>
-          </div>
-        </article>
-        <article class="svc-card reveal">
-          <div class="ph"><img src="img/svc-laptop.jpg" alt="Laptop glowing in a dark room" loading="lazy" width="900" height="602"></div>
-          <div class="svc-body">
-            <span class="svc-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><line x1="2" y1="20" x2="22" y2="20"/></svg>Computers</span>
-            <h3>Laptop and desktop repair</h3>
-            <p>Slow startups, broken hinges, cracked laptop screens, overheating and machines that will not boot at all.</p>
-          </div>
-        </article>
-        <article class="svc-card reveal">
-          <div class="ph"><img src="img/svc-upgrade.jpg" alt="AMD Ryzen processor sitting on a motherboard socket" loading="lazy" width="900" height="675"></div>
-          <div class="svc-body">
-            <span class="svc-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="14" height="14" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="2" x2="9" y2="5"/><line x1="15" y1="2" x2="15" y2="5"/><line x1="9" y1="19" x2="9" y2="22"/><line x1="15" y1="19" x2="15" y2="22"/><line x1="2" y1="9" x2="5" y2="9"/><line x1="2" y1="15" x2="5" y2="15"/><line x1="19" y1="9" x2="22" y2="9"/><line x1="19" y1="15" x2="22" y2="15"/></svg>Upgrades</span>
-            <h3>Upgrades and data</h3>
-            <p>SSD and memory upgrades that make an old machine feel new, plus transfers of your photos, files and contacts.</p>
-          </div>
-        </article>
-        <article class="svc-card reveal">
-          <div class="ph"><img src="img/svc-accessories.jpg" alt="Phone, earbuds and laptop laid out on a white desk" loading="lazy" width="900" height="900"></div>
-          <div class="svc-body">
-            <span class="svc-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>Extras</span>
-            <h3>Accessories and setup</h3>
-            <p>Cases, chargers, screen protectors and help setting up a new phone so nothing gets left behind on the old one.</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
+<!-- 3. TRUST STRIP -->
+<section class="trust" aria-label="Why Te Puke comes to us">
+  <div class="wrap trust-grid">
+    <div class="trust-item pop"><div class="ic"><svg class="icon"><use href="#i-fast"/></svg></div><div><strong>Fast fixes</strong><span>Customers mention screens fixed in about half an hour. Call ahead and we'll check your part is in.</span></div></div>
+    <div class="trust-item pop" style="--d:.1s"><div class="ic"><svg class="icon"><use href="#i-tag"/></svg></div><div><strong>Fair prices</strong><span>Ask for a price on your exact model before you hand your phone over.</span></div></div>
+    <div class="trust-item pop" style="--d:.2s"><div class="ic"><svg class="icon"><use href="#i-repair"/></svg></div><div><strong>Fixed properly</strong><span>Screens, batteries, back glass and even motherboards, at a real local shop.</span></div></div>
+  </div>
+</section>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="wrap">
-      <div class="about-grid">
-        <div class="about-photo reveal">
-          <img src="img/about.jpg" alt="Technician working across two laptops on a repair bench" loading="lazy" width="1200" height="800">
-          <span class="corner">WE FIX 4U</span>
-        </div>
-        <div class="about-copy reveal">
-          <h2>The local repair counter on Jellicoe Street</h2>
-          <p>Fixology Techpro is Te Puke's own phone and computer repair shop. Locals drop in with broken devices; most walk out the same visit with a fix or a straight answer on what it will take.</p>
-          <p>You get a price before any work starts, and your device is tested in front of you before you leave.</p>
-          <ul class="checks">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Locally owned, based at 39 Jellicoe Street</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Clear quote before any repair begins</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Phones, tablets, laptops and desktops all handled in store</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- BRANDS -->
+<div class="brands" aria-label="Brands we repair">
+  <p>Brands on our shop window</p>
+  <div class="marquee" aria-hidden="true">
+    <span>iPhone</span><span>Samsung</span><span>OPPO</span><span>vivo</span><span>Huawei</span><span>Lenovo</span><span>Nokia</span><span>Sony</span><span>Acer</span><span>HTC</span>
+    <span>iPhone</span><span>Samsung</span><span>OPPO</span><span>vivo</span><span>Huawei</span><span>Lenovo</span><span>Nokia</span><span>Sony</span><span>Acer</span><span>HTC</span>
+  </div>
+  <p class="sr-only" style="position:absolute;left:-9999px">iPhone, Samsung, OPPO, vivo, Huawei, Lenovo, Nokia, Sony, Acer and HTC</p>
+</div>
 
-  <!-- CREW -->
-  <section id="crew">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="crew-note">Example team</span>
-        <h2>Who you will deal with</h2>
-        <p>A small shop means the person who quotes your repair is the person who does it.</p>
-      </div>
-      <div class="crew-grid">
-        <article class="crew-card reveal">
-          <div class="avatar" aria-hidden="true">FT</div>
-          <div>
-            <h3>Owner and lead technician</h3>
-            <p>Quotes every job, handles the tricky board-level work and keeps the parts shelf stocked.</p>
-          </div>
-        </article>
-        <article class="crew-card reveal">
-          <div class="avatar" aria-hidden="true">TP</div>
-          <div>
-            <h3>Repairs and service</h3>
-            <p>Screens, batteries and computer tune-ups, plus a hand with data transfers and new phone setups.</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
+<div class="wave" aria-hidden="true" style="background:var(--bone);color:var(--bg)">
+  <svg class="back" viewBox="0 0 2880 64" preserveAspectRatio="none" fill="currentColor"><use href="#wave-path" width="1440" height="64"/><use href="#wave-path" x="1440" width="1440" height="64"/></svg>
+  <svg viewBox="0 0 2880 64" preserveAspectRatio="none" fill="currentColor"><use href="#wave-path" width="1440" height="64"/><use href="#wave-path" x="1440" width="1440" height="64"/></svg>
+</div>
 
-  <!-- REVIEWS -->
-  <section id="reviews">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <h2>What Te Puke says</h2>
-        <p>Real reviews from the Fixology Techpro Google listing.</p>
-      </div>
-      <div class="rev-layout">
-        <div class="rating-panel reveal">
-          <span class="big">4.6</span>
-          <div class="stars" aria-label="4.6 out of 5 stars">
-            <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.87.6-5.2 4.56 1.55 6.72L12 16.56 5.88 20.14l1.55-6.72-5.2-4.56 6.87-.6z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.87.6-5.2 4.56 1.55 6.72L12 16.56 5.88 20.14l1.55-6.72-5.2-4.56 6.87-.6z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.87.6-5.2 4.56 1.55 6.72L12 16.56 5.88 20.14l1.55-6.72-5.2-4.56 6.87-.6z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.87.6-5.2 4.56 1.55 6.72L12 16.56 5.88 20.14l1.55-6.72-5.2-4.56 6.87-.6z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.87.6-5.2 4.56 1.55 6.72L12 16.56 5.88 20.14l1.55-6.72-5.2-4.56 6.87-.6z"/></svg>
-          </div>
-          <p>From 13 reviews on Google</p>
-        </div>
-        <div class="rev-cards">
-          <article class="rev-card reveal">
-            <div class="stars" aria-label="Five stars">
-              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.87.6-5.2 4.56 1.55 6.72L12 16.56 5.88 20.14l1.55-6.72-5.2-4.56 6.87-.6z"/></svg>
-              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.87.6-5.2 4.56 1.55 6.72L12 16.56 5.88 20.14l1.55-6.72-5.2-4.56 6.87-.6z"/></svg>
-              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.87.6-5.2 4.56 1.55 6.72L12 16.56 5.88 20.14l1.55-6.72-5.2-4.56 6.87-.6z"/></svg>
-              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.87.6-5.2 4.56 1.55 6.72L12 16.56 5.88 20.14l1.55-6.72-5.2-4.56 6.87-.6z"/></svg>
-              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.87.6-5.2 4.56 1.55 6.72L12 16.56 5.88 20.14l1.55-6.72-5.2-4.56 6.87-.6z"/></svg>
-            </div>
-            <blockquote>"Our family has had many devices fixed here and every time the pricing and quality has been unbeatable. We have had 2 screens fixed, 1 battery, 1 back glass, and 1 motherboard. All have had zero issues. Couldn't recommend more! A+ Service."</blockquote>
-            <div class="who">Harry Turner <span class="when">on Google</span></div>
-          </article>
-          <article class="rev-card reveal">
-            <div class="stars" aria-label="Five stars">
-              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.87.6-5.2 4.56 1.55 6.72L12 16.56 5.88 20.14l1.55-6.72-5.2-4.56 6.87-.6z"/></svg>
-              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.87.6-5.2 4.56 1.55 6.72L12 16.56 5.88 20.14l1.55-6.72-5.2-4.56 6.87-.6z"/></svg>
-              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.87.6-5.2 4.56 1.55 6.72L12 16.56 5.88 20.14l1.55-6.72-5.2-4.56 6.87-.6z"/></svg>
-              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.87.6-5.2 4.56 1.55 6.72L12 16.56 5.88 20.14l1.55-6.72-5.2-4.56 6.87-.6z"/></svg>
-              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.87.6-5.2 4.56 1.55 6.72L12 16.56 5.88 20.14l1.55-6.72-5.2-4.56 6.87-.6z"/></svg>
-            </div>
-            <blockquote>"Great service, great communication and found the problem. Reasonable price to fix after another phone repair company locally didn't fix the phone properly initially. Will be using these guys again if ever I need a phone repaired."</blockquote>
-            <div class="who">Taryn Crotty <span class="when">on Google</span></div>
-          </article>
-        </div>
-      </div>
-      <div class="rev-actions reveal">
-        <a class="btn btn-ink" href="https://www.google.com/maps/place/?q=place_id:ChIJCVLv5TR5bm0Rib0fr4s7G1A" target="_blank" rel="noopener">See all our Google reviews</a>
-      </div>
+<!-- 4. SERVICES -->
+<section id="repairs" class="services">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">What we fix</span>
+      <h2>Broke it? Bring it in.</h2>
+      <p>Phones, tablets, laptops and computers, plus unlocking, CCTV and the cases and screen protectors to keep it all in one piece next time.</p>
     </div>
-  </section>
+    <div class="bento">
+      <article class="svc big pop">
+        <div class="img"><img src="img/svc-screen-1080.webp" srcset="img/svc-screen-1080.webp 1080w, img/svc-screen-1920.webp 1920w" sizes="(max-width:640px) 100vw, 50vw" alt="Technician in gloves replacing a phone screen" width="1920" height="1080" loading="lazy"></div>
+        <div class="body"><span class="tag">Phones</span><h3>Cracked phone screens</h3><p>iPhone, Samsung, OPPO and more. Spider-webbed glass, black spots or a touchscreen that's stopped responding, we'll swap it out.</p></div>
+      </article>
+      <article class="svc pop" style="--d:.06s">
+        <div class="img"><img src="img/svc-battery-1080.webp" srcset="img/svc-battery-1080.webp 1080w, img/svc-battery-1920.webp 1920w" sizes="(max-width:640px) 100vw, 25vw" alt="Phone opened up for a battery replacement" width="1920" height="1080" loading="lazy"></div>
+        <div class="body"><span class="tag">Phones</span><h3>Battery replacements</h3><p>Phone dying by lunchtime? A fresh battery gets you through the day again.</p></div>
+      </article>
+      <article class="svc pop" style="--d:.12s">
+        <div class="img"><img src="img/svc-backglass-1080.webp" srcset="img/svc-backglass-1080.webp 1080w, img/svc-backglass-1920.webp 1920w" sizes="(max-width:640px) 100vw, 25vw" alt="iPhone with a shattered back glass" width="1280" height="1920" loading="lazy"></div>
+        <div class="body"><span class="tag">Phones</span><h3>Back glass</h3><p>Shattered back panel? We replace it so it looks and feels right again.</p></div>
+      </article>
+      <article class="svc pop" style="--d:.18s">
+        <div class="img"><img src="img/svc-laptop-1080.webp" srcset="img/svc-laptop-1080.webp 1080w, img/svc-laptop-1920.webp 1920w" sizes="(max-width:640px) 100vw, 25vw" alt="Laptop opened up on a repair bench" width="1440" height="1920" loading="lazy"></div>
+        <div class="body"><span class="tag">Computers</span><h3>Laptop &amp; computer repairs</h3><p>Slow, cracked or not turning on. Bring in the laptop or PC and we'll take a look.</p></div>
+      </article>
+      <article class="svc pop" style="--d:.24s">
+        <div class="img"><img src="img/svc-tablet-1080.webp" srcset="img/svc-tablet-1080.webp 1080w, img/svc-tablet-1920.webp 1920w" sizes="(max-width:640px) 100vw, 25vw" alt="Tablet on a desk" width="1920" height="1280" loading="lazy"></div>
+        <div class="body"><span class="tag">Tablets</span><h3>Tablet repairs</h3><p>iPads and Android tablets with cracked screens or charging trouble.</p></div>
+      </article>
+      <article class="svc wide pop" style="--d:.06s">
+        <div class="img"><img src="img/svc-board-1080.webp" srcset="img/svc-board-1080.webp 1080w, img/svc-board-1920.webp 1920w" sizes="(max-width:640px) 100vw, 25vw" alt="Phone with its internal parts exposed" width="1920" height="1280" loading="lazy"></div>
+        <div class="body"><span class="tag">Phones</span><h3>Motherboards &amp; phone unlocking</h3><p>Deeper faults that need more than a new part, and unlocking so your phone works on the network you want.</p></div>
+      </article>
+      <article class="svc wide pop" style="--d:.12s">
+        <div class="img"><img src="img/svc-cctv-1080.webp" srcset="img/svc-cctv-1080.webp 1080w, img/svc-cctv-1920.webp 1920w" sizes="(max-width:640px) 100vw, 25vw" alt="Two CCTV security cameras" width="1920" height="1275" loading="lazy"></div>
+        <div class="body"><span class="tag">Home &amp; business</span><h3>CCTV cameras</h3><p>Security cameras for your home or shop. Talk to us about what you need covered.</p></div>
+      </article>
+      <article class="svc accent pop">
+        <div><h3>Not sure what's wrong with it?</h3><p>Tell us the make, the model and what it's doing, and we'll tell you what we can do.</p></div>
+        <a class="btn btn-primary" href="tel:+64275738028"><svg class="icon"><use href="#i-phone"/></svg>Call for a repair price</a>
+      </article>
+    </div>
+  </div>
+</section>
 
-  <!-- LEAVE A REVIEW BANNER -->
-  <section id="leave-review" aria-label="Leave a review">
-    <div class="wrap banner-flex">
-      <div class="reveal">
-        <h2>Happy with our work? Leave us a review.</h2>
-        <p>A quick Google review helps other Te Puke locals find a repair shop they can trust.</p>
-      </div>
-      <a class="btn btn-gold reveal" href="https://search.google.com/local/writereview?placeid=ChIJCVLv5TR5bm0Rib0fr4s7G1A" target="_blank" rel="noopener">Leave a review</a>
+<!-- STATS -->
+<section class="stats" aria-label="At a glance">
+  <div class="wrap">
+    <div class="stats-grid pop">
+      <div class="stat"><b>4.6</b><span>Google rating</span></div>
+      <div class="stat"><b>13</b><span>Google reviews</span></div>
+      <div class="stat"><b>10</b><span>Brands on our window</span></div>
+      <div class="stat"><b>5</b><span>Services on our shopfront</span></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <h2>Find us on Jellicoe Street</h2>
-        <p>Walk-ins are welcome. If it is urgent, ring first and we will tell you whether to come straight down.</p>
-      </div>
-      <div class="contact-card reveal">
-        <div class="contact-map">
-          <iframe title="Map showing Fixology Techpro at 39 Jellicoe Street, Te Puke" src="https://www.google.com/maps?q=FIXOLOGY%20TECHPRO%2C%2039%20Jellicoe%20Street%2C%20Te%20Puke%203119%2C%20New%20Zealand&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-        </div>
-        <div class="contact-info">
-          <h2>Get hold of us</h2>
-          <div class="contact-btns">
-            <a class="btn btn-gold" href="tel:+64275738028">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              Call Fixology Techpro
-            </a>
-            <a class="btn btn-line" data-gmail data-user="infofixologytech" data-domain="gmail.com" data-su="Repair%20enquiry" href="#contact">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
-              Email Fixology Techpro
-            </a>
-          </div>
-          <div class="info-rows">
-            <div class="info-row">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              <div><span class="lbl">Address</span>39 Jellicoe Street, Te Puke 3119, Bay of Plenty</div>
-            </div>
-            <div class="info-row">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              <div><span class="lbl">Phone</span><a href="tel:+64275738028">027 573 8028</a></div>
-            </div>
-            <div class="info-row">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
-              <div><span class="lbl">Email</span><a data-gmail data-user="infofixologytech" data-domain="gmail.com" href="#contact"><span data-email-text></span></a></div>
-            </div>
-            <div class="info-row">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-              <div><span class="lbl">Hours</span>Open from 11 am. Closed Sunday and Monday.</div>
-            </div>
-          </div>
-          <div class="socials">
-            <a href="https://www.facebook.com/people/Fixology-Techpro/100095399687749/" target="_blank" rel="noopener" aria-label="Fixology Techpro on Facebook">
-              <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-            </a>
-            <a href="https://www.instagram.com/explore/search/keyword/?q=fixology%20techpro" target="_blank" rel="noopener" aria-label="Search Fixology Techpro on Instagram">
-              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-            </a>
-            <a href="https://www.tiktok.com/search?q=Fixology%20Techpro" target="_blank" rel="noopener" aria-label="Search Fixology Techpro on TikTok">
-              <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
-            </a>
-          </div>
-        </div>
+<div class="wave" aria-hidden="true" style="background:var(--bg);color:var(--bone)">
+  <svg class="back" viewBox="0 0 2880 64" preserveAspectRatio="none" fill="currentColor"><use href="#wave-path" width="1440" height="64"/><use href="#wave-path" x="1440" width="1440" height="64"/></svg>
+  <svg viewBox="0 0 2880 64" preserveAspectRatio="none" fill="currentColor"><use href="#wave-path" width="1440" height="64"/><use href="#wave-path" x="1440" width="1440" height="64"/></svg>
+</div>
+
+<!-- 5. ABOUT -->
+<section id="about" class="about">
+  <div class="wrap split">
+    <div class="about-photo pop">
+      <div class="main"><img src="img/storefront-1080.webp" srcset="img/storefront-1080.webp 1080w, img/storefront-1920.webp 1920w" sizes="(max-width:900px) 100vw, 50vw" alt="The Fixology Tech shopfront on Jellicoe Street, Te Puke" width="1920" height="1550" loading="lazy"></div>
+      <div class="inset"><img src="img/case-wall-1080.webp" srcset="img/case-wall-1080.webp 1080w, img/case-wall-1920.webp 1920w" sizes="(max-width:900px) 44vw, 22vw" alt="Wall of iPhone, Samsung and OPPO cases inside the shop" width="1920" height="1440" loading="lazy"></div>
+      <span class="corner-tag">39 Jellicoe St</span>
+    </div>
+    <div class="pop" style="--d:.1s">
+      <span class="eyebrow">The shop</span>
+      <h2>Your local repair counter on Jellicoe Street</h2>
+      <p>Fixology Tech is a phone and computer repair shop in the middle of Te Puke. Walk in with a broken phone, tablet or laptop and talk to the person who'll actually fix it.</p>
+      <p>We also keep a full wall of cases and tempered glass for iPhone, Samsung and OPPO, so you can protect it on the way out. Customers come to us from Pāpāmoa, Paengaroa, Pukehina and Rangiuru.</p>
+      <ul class="checklist">
+        <li><span class="ck"><svg><use href="#i-check"/></svg></span>Locally owned, right in Te Puke</li>
+        <li><span class="ck"><svg><use href="#i-check"/></svg></span>Phones, tablets, laptops and PCs</li>
+        <li><span class="ck"><svg><use href="#i-check"/></svg></span>Cases and screen protectors in stock</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="wave" aria-hidden="true" style="background:var(--bone);color:var(--bg)">
+  <svg class="back" viewBox="0 0 2880 64" preserveAspectRatio="none" fill="currentColor"><use href="#wave-path" width="1440" height="64"/><use href="#wave-path" x="1440" width="1440" height="64"/></svg>
+  <svg viewBox="0 0 2880 64" preserveAspectRatio="none" fill="currentColor"><use href="#wave-path" width="1440" height="64"/><use href="#wave-path" x="1440" width="1440" height="64"/></svg>
+</div>
+
+<!-- 6. TEAM -->
+<section id="team" class="team">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Who you'll deal with</span>
+      <h2>A friendly face at the counter</h2>
+    </div>
+    <div class="team-card pop">
+      <div class="avatar" aria-hidden="true">J</div>
+      <div>
+        <div class="role">Owner</div>
+        <h3>Jagmanpreet</h3>
+        <p>Runs the shop on Jellicoe Street. Tell him what's happened to your device and he'll give you the options straight.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<div class="wave" aria-hidden="true" style="background:var(--bg);color:var(--bone)">
+  <svg class="back" viewBox="0 0 2880 64" preserveAspectRatio="none" fill="currentColor"><use href="#wave-path" width="1440" height="64"/><use href="#wave-path" x="1440" width="1440" height="64"/></svg>
+  <svg viewBox="0 0 2880 64" preserveAspectRatio="none" fill="currentColor"><use href="#wave-path" width="1440" height="64"/><use href="#wave-path" x="1440" width="1440" height="64"/></svg>
+</div>
+
+<!-- 7. REVIEWS -->
+<section id="reviews" class="reviews">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Google reviews</span>
+      <h2>What Te Puke says</h2>
+      <p>Rated 4.6 from 13 reviews on Google.</p>
+    </div>
+    <div class="reviews-grid">
+      <article class="review pop"><svg class="quote" aria-hidden="true"><use href="#i-quote"/></svg><div class="stars" role="img" aria-label="5 stars">★★★★★</div><p>"Our family has had many devices fixed here and every time the pricing and quality has been unbeatable. We have had 2 screens fixed, 1 battery, 1 back glass, and 1 motherboard. All have had zero issues. Couldn't recommend more! A+ Service."</p><footer><span class="mini" aria-hidden="true">HT</span><div><strong>Harry Turner</strong>Google review · 2026</div></footer></article>
+      <article class="review pop" style="--d:.08s"><svg class="quote" aria-hidden="true"><use href="#i-quote"/></svg><div class="stars" role="img" aria-label="5 stars">★★★★★</div><p>"Great service, great communication and found the problem. Reasonable price to fix after another phone repair company locally didn't fix the phone properly initially. Will be using these guys again if ever I need a phone repaired."</p><footer><span class="mini" aria-hidden="true">TC</span><div><strong>Taryn Crotty</strong>Google review · 2024</div></footer></article>
+      <article class="review pop" style="--d:.16s"><svg class="quote" aria-hidden="true"><use href="#i-quote"/></svg><div class="stars" role="img" aria-label="5 stars">★★★★★</div><p>"The friendly guy not only fixed my phone (which I thought was going to be unfixable), but also did it for a great price. Highly recommend this service!"</p><footer><span class="mini" aria-hidden="true">LD</span><div><strong>Lachlan Devereux</strong>Google review · 2024</div></footer></article>
+      <article class="review pop" style="--d:.24s"><svg class="quote" aria-hidden="true"><use href="#i-quote"/></svg><div class="stars" role="img" aria-label="5 stars">★★★★★</div><p>"Fast and friendly service, have my phone screen fixed within half an hour and affordable prices."</p><footer><span class="mini" aria-hidden="true">G</span><div><strong>Gurkomalkang</strong>Google review · 2024</div></footer></article>
+    </div>
+    <div class="center-cta"><a class="btn btn-soft" href="https://search.google.com/local/reviews?placeid=ChIJCVLv5TR5bm0Rib0fr4s7G1A" target="_blank" rel="noopener">See all our Google reviews</a></div>
+  </div>
+</section>
+
+<!-- 8. LEAVE A REVIEW -->
+<section class="leave" aria-label="Leave a review">
+  <div class="wrap">
+    <div class="leave-box pop">
+      <div><h2>Happy with your repair? Leave us a review</h2><p>It takes a minute and helps other people in Te Puke find us.</p></div>
+      <a class="btn btn-primary" href="https://search.google.com/local/writereview?placeid=ChIJCVLv5TR5bm0Rib0fr4s7G1A" target="_blank" rel="noopener">Leave a Google review</a>
+    </div>
+  </div>
+</section>
+
+<!-- 9. FAQ -->
+<section id="faq" class="faq">
+  <div class="wrap faq-wrap">
+    <div class="section-head pop">
+      <span class="eyebrow">FAQ</span>
+      <h2>Before you bring it in</h2>
+      <p>Can't see your question? Give us a call on 027 573 8028.</p>
+    </div>
+    <div class="faq-list">
+      <details class="pop"><summary>What can you fix?</summary><p>Phones, tablets, laptops and computers. The common jobs are cracked screens, batteries and back glass, and we also handle motherboard faults, phone unlocking and CCTV. Brands include iPhone, Samsung, OPPO, vivo, Huawei, Lenovo, Nokia, Sony, Acer and HTC.</p></details>
+      <details class="pop" style="--d:.05s"><summary>How much will my repair cost?</summary><p>It depends on the make, the model and the part. Call or email us with those details and what's wrong, and ask for a price before you leave your device with us.</p></details>
+      <details class="pop" style="--d:.1s"><summary>How long does a screen repair take?</summary><p>It depends on the model and whether we have the part in. One customer had their screen fixed within half an hour, but call ahead and we'll tell you what to expect for yours.</p></details>
+      <details class="pop" style="--d:.15s"><summary>Do I need to book?</summary><p>Give us a call before you come in. That way we can check we've got the right part for your device and that someone's at the counter.</p></details>
+      <details class="pop" style="--d:.2s"><summary>Do you sell cases and screen protectors?</summary><p>Yes. We keep a wall of cases and tempered glass for iPhone, Samsung and OPPO models at the shop.</p></details>
+      <details class="pop" style="--d:.25s"><summary>Where are you, and who do you look after?</summary><p>We're at 39 Jellicoe Street, Te Puke. We also look after customers from Pāpāmoa, Paengaroa, Pukehina and Rangiuru.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 10. CONTACT -->
+<section id="contact" class="contact">
+  <div class="wrap split">
+    <div class="pop">
+      <span class="eyebrow">Contact</span>
+      <h2>Tell us what's broken</h2>
+      <p style="color:#d6d0c3">Call or email with your make, model and what's happened, and we'll come back to you with what we can do.</p>
+      <ul class="contact-rows">
+        <li><span class="ic"><svg><use href="#i-phone"/></svg></span><a href="tel:+64275738028">027 573 8028</a></li>
+        <li><span class="ic"><svg><use href="#i-mail"/></svg></span><span id="emailText">Email us using the button</span></li>
+        <li><span class="ic"><svg><use href="#i-pin"/></svg></span><a href="https://www.google.com/maps/place/?q=place_id:ChIJCVLv5TR5bm0Rib0fr4s7G1A" target="_blank" rel="noopener">39 Jellicoe Street, Te Puke 3119</a></li>
+        <li><span class="ic"><svg><use href="#i-clock"/></svg></span><span>Call ahead to check we're open and have your part</span></li>
+      </ul>
+      <div class="socials">
+        <a href="https://www.facebook.com/profile.php?id=100095399687749" target="_blank" rel="noopener" aria-label="Fixology Techpro on Facebook"><svg><use href="#i-fb"/></svg></a>
+        <a href="https://www.instagram.com/explore/search/keyword/?q=fixology%20techpro" target="_blank" rel="noopener" aria-label="Search Instagram for Fixology Techpro"><svg><use href="#i-ig"/></svg></a>
+        <a href="https://www.tiktok.com/search?q=Fixology%20Techpro" target="_blank" rel="noopener" aria-label="Search TikTok for Fixology Techpro"><svg><use href="#i-tt"/></svg></a>
+      </div>
+    </div>
+    <div class="contact-card pop" style="--d:.1s">
+      <h3>Get a repair price</h3>
+      <p>Tap to call us, or open a ready-to-send email.</p>
+      <a class="btn btn-primary" href="tel:+64275738028"><svg class="icon"><use href="#i-phone"/></svg>Call for a repair price</a>
+      <a class="btn btn-outline-light" href="#" data-gmail data-user="infofixologytech" data-domain="gmail.com" data-su="Repair%20enquiry" data-body="Hi%20Fixology%20Tech%2C%0A%0AI'd%20like%20a%20price%20for%20a%20repair.%0A%0ADevice%20(make%20and%20model)%3A%0AWhat's%20wrong%20with%20it%3A%0A%0AThanks"><svg class="icon"><use href="#i-mail"/></svg>Email us about your repair</a>
+    </div>
+  </div>
+</section>
+
+<!-- 11. MAP -->
+<section class="map" aria-label="Map">
+  <div class="wrap">
+    <iframe title="Map to Fixology Techpro, 39 Jellicoe Street, Te Puke" src="https://www.google.com/maps?q=FIXOLOGY+TECHPRO,+39+Jellicoe+Street,+Te+Puke+3119&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
 
 </main>
 
-<footer>
+<!-- 12. FOOTER -->
+<footer class="footer">
   <div class="wrap">
-    <div class="foot-grid">
-      <div class="foot-brand">
-        <img src="img/logo-gold.png" alt="Fixology Tech logo, a phone and gear mark with the tagline We Fix 4U" width="884" height="1350" loading="lazy">
-        <p>Phone and computer repairs at 39 Jellicoe Street, Te Puke, Bay of Plenty.</p>
-      </div>
-      <div class="foot-col">
-        <h3>Site</h3>
-        <ul>
-          <li><a href="#services">Repairs</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#reviews">Reviews</a></li>
-          <li><a href="#contact">Find us</a></li>
-        </ul>
-      </div>
-      <div class="foot-col">
-        <h3>Legal</h3>
-        <ul>
-          <li><a href="terms.html">Terms &amp; Conditions</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-        </ul>
-      </div>
-      <div class="foot-col">
-        <h3>Follow</h3>
-        <div class="socials">
-          <a href="https://www.facebook.com/people/Fixology-Techpro/100095399687749/" target="_blank" rel="noopener" aria-label="Fixology Techpro on Facebook">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-          </a>
-          <a href="https://www.instagram.com/explore/search/keyword/?q=fixology%20techpro" target="_blank" rel="noopener" aria-label="Search Fixology Techpro on Instagram">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-          </a>
-          <a href="https://www.tiktok.com/search?q=Fixology%20Techpro" target="_blank" rel="noopener" aria-label="Search Fixology Techpro on TikTok">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
-          </a>
-        </div>
-      </div>
+    <div class="flogo"><img src="img/logo-gold.png" alt="Fixology Tech, We Fix 4U" width="900" height="1374"><span>© <span id="year">2026</span> Fixology Techpro · 39 Jellicoe Street, Te Puke</span></div>
+    <div class="footer-links">
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="https://search.google.com/local/writereview?placeid=ChIJCVLv5TR5bm0Rib0fr4s7G1A" target="_blank" rel="noopener">Leave a review</a>
     </div>
-    <div class="foot-base">
-      <span>&copy; 2026 Fixology Techpro, Te Puke. All rights reserved.</span>
-      <span>Demo site by Scaled Solutions</span>
+    <div class="socials">
+      <a href="https://www.facebook.com/profile.php?id=100095399687749" target="_blank" rel="noopener" aria-label="Fixology Techpro on Facebook"><svg><use href="#i-fb"/></svg></a>
+      <a href="https://www.instagram.com/explore/search/keyword/?q=fixology%20techpro" target="_blank" rel="noopener" aria-label="Search Instagram for Fixology Techpro"><svg><use href="#i-ig"/></svg></a>
+      <a href="https://www.tiktok.com/search?q=Fixology%20Techpro" target="_blank" rel="noopener" aria-label="Search TikTok for Fixology Techpro"><svg><use href="#i-tt"/></svg></a>
     </div>
   </div>
 </footer>
 
 <script>
-(function(){
-  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* intro */
-  var intro = document.getElementById('intro');
-  if (intro) {
-    window.addEventListener('load', function(){
-      setTimeout(function(){ intro.classList.add('gone'); }, reduced ? 0 : 900);
-    });
-    setTimeout(function(){ intro.classList.add('gone'); }, 2500);
-  }
+// Mobile menu
+var burger=document.getElementById('burger'),links=document.getElementById('navLinks');
+burger.addEventListener('click',function(){var o=links.classList.toggle('open');burger.setAttribute('aria-expanded',o);burger.setAttribute('aria-label',o?'Close menu':'Open menu');});
+links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){links.classList.remove('open');burger.setAttribute('aria-expanded','false');burger.setAttribute('aria-label','Open menu');});});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&links.classList.contains('open')){links.classList.remove('open');burger.setAttribute('aria-expanded','false');burger.focus();}});
 
-  /* mobile menu */
-  var btn = document.getElementById('menu-btn');
-  var menu = document.getElementById('mobile-menu');
-  if (btn && menu) {
-    btn.addEventListener('click', function(){
-      var open = menu.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-    menu.querySelectorAll('a').forEach(function(a){
-      a.addEventListener('click', function(){ menu.classList.remove('open'); btn.setAttribute('aria-expanded','false'); });
-    });
-  }
+// Hero crossfade with pause/play
+var slides=document.querySelectorAll('#heroSlides img'),dots=document.querySelectorAll('#dots i'),cur=0,timer=null;
+var toggle=document.getElementById('slideToggle');
+function advance(){slides[cur].classList.remove('active');dots[cur].classList.remove('on');cur=(cur+1)%slides.length;slides[cur].classList.add('active');dots[cur].classList.add('on');}
+function play(){if(!timer)timer=setInterval(advance,6000);toggle.setAttribute('aria-pressed','false');toggle.setAttribute('aria-label','Pause slideshow');}
+function pause(){clearInterval(timer);timer=null;toggle.setAttribute('aria-pressed','true');toggle.setAttribute('aria-label','Play slideshow');}
+toggle.addEventListener('click',function(){timer?pause():play();});
+if(reduce){pause();}else{play();}
 
-  /* hero slides */
-  var slides = Array.prototype.slice.call(document.querySelectorAll('.hero-slides img'));
-  var cur = 0;
-  if (!reduced && slides.length > 1) {
-    setInterval(function(){
-      slides[cur].classList.remove('on');
-      cur = (cur + 1) % slides.length;
-      slides[cur].classList.add('on');
-    }, 6000);
-  }
+// Pop-in reveals
+var pops=document.querySelectorAll('.pop');
+if('IntersectionObserver' in window&&!reduce){
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){if(!en.isIntersecting)return;en.target.classList.add('in');io.unobserve(en.target);});
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  pops.forEach(function(p){io.observe(p);});
+}else{pops.forEach(function(p){p.classList.add('in');});}
 
-  /* reviews data drives hero quote */
-  var quotes = [
-    { text: '"Every time the pricing and quality has been unbeatable. Screens, a battery, back glass and a motherboard, all with zero issues."', name: 'Harry Turner' },
-    { text: '"Great service, great communication and found the problem. Will be using these guys again if ever I need a phone repaired."', name: 'Taryn Crotty' }
-  ];
-  var hqText = document.getElementById('hq-text');
-  var hqName = document.getElementById('hq-name');
-  var qi = 0;
-  function setQuote(i){
-    hqText.textContent = quotes[i].text;
-    hqName.textContent = quotes[i].name;
-  }
-  if (hqText && hqName) {
-    setQuote(0);
-    if (!reduced && quotes.length > 1) {
-      setInterval(function(){
-        hqText.style.opacity = '0';
-        setTimeout(function(){
-          qi = (qi + 1) % quotes.length;
-          setQuote(qi);
-          hqText.style.opacity = '1';
-        }, 500);
-      }, 6500);
-    }
-  }
+// Gmail compose links (email built in JS so Cloudflare can't rewrite it)
+document.querySelectorAll('a[data-gmail]').forEach(function(a){var to=a.getAttribute('data-user')+'@'+a.getAttribute('data-domain');a.href='https://mail.google.com/mail/?view=cm&fs=1&to='+encodeURIComponent(to)+'&su='+(a.getAttribute('data-su')||'')+'&body='+(a.getAttribute('data-body')||'');a.target='_blank';a.rel='noopener';});
+var et=document.getElementById('emailText');if(et)et.textContent='infofixologytech'+'@'+'gmail.com';
 
-  /* scroll reveals */
-  var toReveal = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window && !reduced) {
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-      });
-    }, { threshold: 0.12 });
-    toReveal.forEach(function(el){ io.observe(el); });
-    setTimeout(function(){
-      toReveal.forEach(function(el){ el.classList.add('in'); });
-    }, 3000);
-  } else {
-    toReveal.forEach(function(el){ el.classList.add('in'); });
-  }
-
-  /* gmail compose + visible email text */
-  document.querySelectorAll('a[data-gmail]').forEach(function(a){
-    var to = a.getAttribute('data-user') + '@' + a.getAttribute('data-domain');
-    a.href = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(to) + '&su=' + (a.getAttribute('data-su') || '') + '&body=' + (a.getAttribute('data-body') || '');
-    a.target = '_blank';
-    a.rel = 'noopener';
-    var t = a.querySelector('[data-email-text]');
-    if (t) { t.textContent = to; }
-  });
-})();
+document.getElementById('year').textContent=new Date().getFullYear();
 </script>
 </body>
 </html>
